@@ -7,7 +7,7 @@ namespace HexConverter
             InitializeComponent();
         }
 
-        private void valuesTypeListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void valuesTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateResult();
         }
@@ -22,7 +22,7 @@ namespace HexConverter
 
             try
             {
-                int optionIndex = valuesTypeListBox.SelectedIndex;
+                int optionIndex = valuesTypeComboBox.SelectedIndex;
 
                 string hexString = userInputTextBox.Text.Replace("0x", "");
                 if (hexString.Length % 2 != 0)
@@ -65,7 +65,7 @@ namespace HexConverter
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            valuesTypeListBox.SelectedIndex = 0;
+            valuesTypeComboBox.SelectedIndex = 0;
         }
     }
 }
